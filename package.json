@@ -6,15 +6,11 @@
     "jsonwebtoken": "^8.5.1",
     "pg": "^8.7.1"
   },
-  "devDependencies": {
-    "nodemon": "^2.0.13"
-  },
   "name": "base-back",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node ./src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon ./src/index.js"
+    "start": "node ./index.js",
+    "dev": "nodemon ./index.js"
   }
 }
