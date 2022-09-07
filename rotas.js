@@ -1,6 +1,5 @@
 const express = require('express');
 const rotas = express();
-const validaToken = require('./intermediarios/autenticar');
 
 const {
     cadastrarUsuario,
@@ -16,10 +15,6 @@ const welcome = async (req, res) => {
 
 rotas.get('/', welcome);
 rotas.post('/usuario', cadastrarUsuario);
-rotas.post('/login', logarUsuario);
-
-rotas.use(validaToken);
-
 rotas.get('/usuario/:id', detalharUsuario);
 rotas.get('/usuarios', getUsers);
 rotas.put('/usuario', atualizarUsuario);
