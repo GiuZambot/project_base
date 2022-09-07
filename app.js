@@ -1,10 +1,8 @@
 var express = require('express');
 var path = require('path');
+const rotas = require('./rotas');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-
-var indexRouter = require('./routes/index');
-var quotesRouter = require('./routes/quotes');
 
 var app = express();
 
@@ -14,7 +12,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
-app.use('/quotes', quotesRouter);
+app.use(rotas);
 
 module.exports = app;
