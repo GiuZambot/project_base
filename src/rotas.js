@@ -10,6 +10,11 @@ const {
     getUsers,
 } = require('./controladores/usuarios');
 
+const welcome = async (req, res) => {
+    return res.status(400).json({ site: "welcome" });
+}
+
+rotas.get('/', welcome);
 rotas.post('/usuario', cadastrarUsuario);
 rotas.post('/login', logarUsuario);
 
