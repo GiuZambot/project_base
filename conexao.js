@@ -5,7 +5,7 @@ const pool = new Pool({
     user: 'dfaksqcs',
     host: 'motty.db.elephantsql.com',
     database: 'dfaksqcs',
-    password: process.env.REACT_APP_NPS_DB_KEY,
+    password: process.env.REACT_APP_DB_KEY,
     port: 5432
 });
 
